@@ -22,8 +22,13 @@ function updateDockBadge()
 
     for (i = 0;  i < tree.length; i++)
     {
-        name = tree[i].getElementsByClassName("app-source-name")[0].innerText;
-        badge = tree[i].getElementsByClassName("v-MailboxSource-badge")[0].innerText;
+        if (FILTERED.indexOf(name) > -1)
+        {
+            // console.log(name)
+            badge = 0
+        } else {
+           badge = tree[i].getElementsByClassName("v-MailboxSource-badge")[0].innerText;
+        }
         // console.log("name: " + name + ", badge: " + badge);
 
         if (badge)
