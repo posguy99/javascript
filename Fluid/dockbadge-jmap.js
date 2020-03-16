@@ -22,6 +22,7 @@ function updateDockBadge()
 
     for (i = 0;  i < tree.length; i++)
     {
+        name = tree[i].getElementsByClassName("app-source-name")[0].innerText;
         if (FILTERED.indexOf(name) > -1)
         {
             // console.log(name)
